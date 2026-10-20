@@ -1,5 +1,6 @@
 resources.arsc=build/resources.arsc
 classes20.dex=build/dex/classes20b.dex
+classes21.dex=build/dex/classes21b.dex
 res/mipmap-mdpi/ig_launcher_background.png=build/igicon/mdpi_bg.png
 res/mipmap-mdpi/ig_launcher_foreground.png=build/igicon/mdpi_fg.png
 res/mipmap-mdpi/icon.png=build/igicon/mdpi_legacy.png

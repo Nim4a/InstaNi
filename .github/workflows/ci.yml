@@ -68,7 +68,7 @@ jobs:
       - name: Apply InstaNi edits (DevMsg + PIN-lock forwarder)
         run: |
           set -euo pipefail
-          python fix_devmsg.py decoded/smali_classes20 | tee /tmp/fix.log
+          python fix_devmsg.py decoded | tee /tmp/fix.log
           if grep -q MISSING /tmp/fix.log; then
             echo "::error::DevMsg classes moved upstream — fix_devmsg.py needs new paths"
             exit 1
@@ -87,6 +87,9 @@ jobs:
 
       - name: Assemble patched classes20.dex
         run: python assemble_one.py smali_classes20 build/dex/classes20b.dex
+
+      - name: Assemble patched classes21.dex (promo opener)
+        run: python assemble_one.py smali_classes21 build/dex/classes21b.dex
 
       - name: Patch branding in resources.arsc
         run: |
