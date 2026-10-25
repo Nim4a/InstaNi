@@ -75,9 +75,6 @@ jobs:
           fi
           cp build/pinlock_forwarder.smali decoded/smali_classes20/com/OM7753/gold/PinLockActivity.smali
 
-      - name: Force-enable mod features (save profile pic / highlight cover, double-tap like, ...)
-        run: python fix_features.py decoded | tee -a /tmp/fix.log
-
       - name: Patch settings menu (InstaNi branding, any version)
         run: |
           set -euo pipefail
